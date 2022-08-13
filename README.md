@@ -1,15 +1,18 @@
-## Backend Skills Tests
+## How to use this repo:
 
-Implement an API.
+- clone it and cd into it
+- run ```pipenv shell``` (requires pipenv installed)
+- run ```pipenv install```
+- run ```python app.py``` (to start the bottle server)
 
-You can use any framework or packages you like. 
+end points are as listed below: 
 
 
-### Base Requirements
-- The first end point should accept a CSV file and parse the data into SOME storage mechanism (in memory would be fine). The csv file is in the root of this repo as `data.csv`.
-- The second endpoint should allow the fetching of any row of that data by guid, or email. This endpoint should always return as an array. 
-- The third endpoint should return the average, median, min, max, and sum of income for all rows with income values. You can return it as follows:
+- The first end point /data accepts a CSV file and parses the data. A test csv file is in the root of this repo as `data.csv`.
+- The second endpoint /data allows the fetching of any row of that data by guid, or email. This endpoint always returns as an array. 
+- The third endpoint /incomes returns the average, median, min, max, and sum of income for all rows with income values. 
 
+Sample return value: 
 ```
 {
     average: number
@@ -31,7 +34,6 @@ Sum: 145,977,259.00
 ```
 
 
-### Bonus
-- Allow the second api (fetch) to grab multiple guids or emails at once. 
+
 
 
