@@ -8,10 +8,9 @@
 end points are as listed below: 
 
 
-- The first end point /data accepts a CSV file and parses the data. A test csv file is in the root of this repo as `data.csv`.
-- The second endpoint /data allows the fetching of any row of that data by guid, or email. This endpoint always returns as an array. 
-- The third endpoint /incomes returns the average, median, min, max, and sum of income for all rows with income values. 
-
+- The first end point /data accepts a CSV file and parses the data. A test csv file is in the root of this repo as `data.csv`. Please use Thunder Client or Postman to upload the file as a POST request. The file variable is "upload_file".
+- The second endpoint /data allows the fetching of any row of that data by guid, or email. This endpoint always returns as an array. This is a get request from the url. Format is data/abcdefg,xxxyy,random@example.com (will also take a single request without commas). Will not show or return any erroneous inputs. 
+- The third endpoint /incomes returns the average, median, min, max, and sum of income for all rows with income values. This is also a get request and requires no inputs.
 Sample return value: 
 ```
 {
